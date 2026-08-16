@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nostra - Collections</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: Poppins, sans-serif
+    }
+
+    .section-width {
+      width: min(100% - 40px, 1880px);
+      margin: auto
+    }
+
+    .product-card img {
+      transition: transform .35s
+    }
+
+    .product-card:hover img {
+      transform: scale(1.03)
+    }
+
+    @media(max-width:768px) {
+      .section-width {
+        width: min(100% - 24px, 1880px)
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-[#fafafa] text-[#111827]">
+
+  <!-- Offer Bar -->
+  <div id="offerBar" class="bg-[#1d232d] text-white text-center px-4 py-3 text-base md:text-xl relative">
+    Sign Up and <b>GET 20% OFF</b> for your first Order
+    <button id="closeOffer" class="absolute right-5 top-1/2 -translate-y-1/2 text-2xl" aria-label="Close"><i
+        class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="bg-white border-b border-gray-100 py-6 md:py-8 shadow-sm">
+    <div class="section-width flex items-center justify-between">
+      <a href="index.html" class="text-4xl md:text-5xl font-bold">Nostra</a>
+      <div class="hidden md:flex items-center gap-10 lg:gap-12 text-lg lg:text-xl font-medium text-[#1d232d]">
+        <a href="index.html" class="hover:text-gray-500 transition">Home</a>
+        <a href="collection.html" class="font-bold underline decoration-2 underline-offset-4">Collections</a>
+        <a href="contact.html" class="hover:text-gray-500 transition">Contact Us</a>
+      </div>
+      <button id="menuBtn" class="md:hidden text-2xl text-[#1d232d]"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden px-6 mt-5 border-t pt-4 bg-white">
+      <div class="flex flex-col gap-4 text-lg font-medium text-[#1d232d]">
+        <a href="index.html">Home</a>
+        <a href="collection.html" class="font-bold underline decoration-2 underline-offset-4">Collections</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="section-width py-10 md:py-16">
+    <div class="flex flex-col md:flex-row gap-10 lg:gap-14">
+
+      <!-- Sidebar Filters -->
+      <aside class="w-full md:w-1/4 filter-sidebar">
+        <h2 class="text-3xl font-bold mb-8 text-[#1d232d] border-b pb-4">Filters</h2>
+
+        <!-- Occasion Group -->
+        <div class="border-b border-gray-200 pb-6 mb-6">
+          <h3 class="font-bold text-xl mb-4 text-[#1d232d]">Occasion</h3>
+          <div class="flex flex-col gap-3 text-base md:text-lg">
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+              <input type="checkbox" name="tags" value="summer" class="w-5 h-5 rounded border-gray-300 text-[#1d232d] focus:ring-[#1d232d] cursor-pointer">
+              <span>Summer</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+              <input type="checkbox" name="tags" value="party" class="w-5 h-5 rounded border-gray-300 text-[#1d232d] focus:ring-[#1d232d] cursor-pointer">
+              <span>Party</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+              <input type="checkbox" name="tags" value="beach" class="w-5 h-5 rounded border-gray-300 text-[#1d232d] focus:ring-[#1d232d] cursor-pointer">
+              <span>Beach</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Colors Group -->
+        <div class="border-b border-gray-200 pb-6 mb-6">
+          <h3 class="font-bold text-xl mb-4 text-[#1d232d]">Colors</h3>
+          <div class="flex flex-col gap-3 text-base md:text-lg">
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+              <input type="checkbox" name="tags" value="red" class="w-5 h-5 rounded border-gray-300 text-[#1d232d] focus:ring-[#1d232d] cursor-pointer">
+              <span>Red</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+              <input type="checkbox" name="tags" value="blue" class="w-5 h-5 rounded border-gray-300 text-[#1d232d] focus:ring-[#1d232d] cursor-pointer">
+              <span>Blue</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+              <input type="checkbox" name="tags" value="white" class="w-5 h-5 rounded border-gray-300 text-[#1d232d] focus:ring-[#1d232d] cursor-pointer">
+              <span>White</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+              <input type="checkbox" name="tags" value="black" class="w-5 h-5 rounded border-gray-300 text-[#1d232d] focus:ring-[#1d232d] cursor-pointer">
+              <span>Black</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Arrivals Group -->
+        <div class="pb-6">
+          <h3 class="font-bold text-xl mb-4 text-[#1d232d]">Arrivals</h3>
+          <div class="flex flex-col gap-3 text-base md:text-lg">
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+              <input type="checkbox" name="tags" value="new" class="w-5 h-5 rounded border-gray-300 text-[#1d232d] focus:ring-[#1d232d] cursor-pointer">
+              <span>New Arrivals</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+              <input type="checkbox" name="tags" value="old" class="w-5 h-5 rounded border-gray-300 text-[#1d232d] focus:ring-[#1d232d] cursor-pointer">
+              <span>Old Stock</span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Products Grid & Search Bar Section -->
+      <section class="flex-1">
+
+        <!-- Search Bar -->
+        <div class="relative mb-8 md:mb-10">
+          <input type="text" id="search-bar" placeholder="Search for products..."
+            class="w-full border border-gray-300 h-14 pl-5 pr-12 text-lg outline-none rounded-md focus:border-[#1d232d] transition shadow-sm">
+          <i class="fa-solid fa-magnifying-glass absolute right-5 top-1/2 -translate-y-1/2 text-xl text-gray-400"></i>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+          <!-- Card 1 -->
+          <div class="product-card bg-white border border-gray-200/60 rounded-md p-4 shadow-sm flex flex-col justify-between"
+            data-tags="summer red new">
+            <div class="overflow-hidden rounded-sm aspect-square bg-[#f3f4f6]">
+              <img src="images/collection-image1.jpg" alt="Floral Red Summer Shirt" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="font-bold text-lg md:text-xl text-[#1d232d]">Floral Red Summer Shirt</h3>
+              <p class="text-gray-500 font-semibold mt-1 text-base md:text-lg">$220</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="product-card bg-white border border-gray-200/60 rounded-md p-4 shadow-sm flex flex-col justify-between"
+            data-tags="beach blue new">
+            <div class="overflow-hidden rounded-sm aspect-square bg-[#f3f4f6]">
+              <img src="images/collection-image2.jpg" alt="Blue Beach Shirt" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="font-bold text-lg md:text-xl text-[#1d232d]">Blue Beach Shirt</h3>
+              <p class="text-gray-500 font-semibold mt-1 text-base md:text-lg">$310</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="product-card bg-white border border-gray-200/60 rounded-md p-4 shadow-sm flex flex-col justify-between"
+            data-tags="party black old">
+            <div class="overflow-hidden rounded-sm aspect-square bg-[#f3f4f6]">
+              <img src="images/collection-image3.jpg" alt="Black Party Shirt" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="font-bold text-lg md:text-xl text-[#1d232d]">Black Party Shirt</h3>
+              <p class="text-gray-500 font-semibold mt-1 text-base md:text-lg">$450</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="product-card bg-white border border-gray-200/60 rounded-md p-4 shadow-sm flex flex-col justify-between"
+            data-tags="summer white new">
+            <div class="overflow-hidden rounded-sm aspect-square bg-[#f3f4f6]">
+              <img src="images/collection-image4.jpg" alt="White Casual Shirt" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="font-bold text-lg md:text-xl text-[#1d232d]">White Casual Shirt</h3>
+              <p class="text-gray-500 font-semibold mt-1 text-base md:text-lg">$180</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="product-card bg-white border border-gray-200/60 rounded-md p-4 shadow-sm flex flex-col justify-between"
+            data-tags="party red old">
+            <div class="overflow-hidden rounded-sm aspect-square bg-[#f3f4f6]">
+              <img src="images/collection-image5.jpg" alt="Red Printed Shirt" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="font-bold text-lg md:text-xl text-[#1d232d]">Red Printed Shirt</h3>
+              <p class="text-gray-500 font-semibold mt-1 text-base md:text-lg">$290</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="product-card bg-white border border-gray-200/60 rounded-md p-4 shadow-sm flex flex-col justify-between"
+            data-tags="beach white new">
+            <div class="overflow-hidden rounded-sm aspect-square bg-[#f3f4f6]">
+              <img src="images/collection-image6.jpg" alt="Beach Casual Top" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="font-bold text-lg md:text-xl text-[#1d232d]">Beach Casual Top</h3>
+              <p class="text-gray-500 font-semibold mt-1 text-base md:text-lg">$250</p>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="product-card bg-white border border-gray-200/60 rounded-md p-4 shadow-sm flex flex-col justify-between"
+            data-tags="summer white new">
+            <div class="overflow-hidden rounded-sm aspect-square bg-[#f3f4f6]">
+              <img src="images/collection-image7.jpg" alt="White Casual T-Shirt" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="font-bold text-lg md:text-xl text-[#1d232d]">White Casual T-Shirt</h3>
+              <p class="text-gray-500 font-semibold mt-1 text-base md:text-lg">$180</p>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="product-card bg-white border border-gray-200/60 rounded-md p-4 shadow-sm flex flex-col justify-between"
+            data-tags="beach blue new">
+            <div class="overflow-hidden rounded-sm aspect-square bg-[#f3f4f6]">
+              <img src="images/collection-image8.jpg" alt="Blue Beach Pant" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 text-center">
+              <h3 class="font-bold text-lg md:text-xl text-[#1d232d]">Blue Beach Pant</h3>
+              <p class="text-gray-500 font-semibold mt-1 text-base md:text-lg">$310</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+ <footer id="contact" class="bg-[#1d232d] text-white">
+    <div class="section-width py-14">
+      <h2 class="text-4xl md:text-5xl font-bold">Nostra</h2>
+      <p class="text-lg md:text-2xl mt-5 max-w-5xl">The Standard chunk of Lorem ipsum used since the 1500s is reproduced
+        below for those interest</p>
+      <div class="flex gap-10 text-3xl mt-8"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i
+            class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+      <p class="text-lg md:text-2xl mt-10">@ 2023 Nostra.com</p>
+    </div>
+  </footer>
+
+  <script src="collections.js"></script>
+</body>
+
+</html>
